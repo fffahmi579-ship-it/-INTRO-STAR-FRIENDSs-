@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .field {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #ccc; /* Awalnya abu-abu */
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button.enabled {
+            background-color: #4CAF50; /* Hijau jika diaktifkan */
+        }
+        .footer {
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>୨୧𝑊𝐸𝐿𝐶𝑂𝑀𝐸 𝑇𝑂 𝐺𝐶୨୧</h1>
+        <div class="card">
+            <h2>KARTU INTRO ↓*</h2>
+            <p>*ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚</p>
+            <p>*Card intro*</p>
+            <div class="field">
+                <label>*★┇NAMA:*</label>
+                <input type="text" id="nama" placeholder="Masukkan nama Anda">
+            </div>
+            <div class="field">
+                <label>*★┇KELAS:*</label>
+                <input type="text" id="kelas" placeholder="Masukkan kelas Anda">
+            </div>
+            <div class="field">
+                <label>*★┇UMUR:*</label>
+                <input type="number" id="umur" placeholder="Masukkan umur Anda">
+            </div>
+            <div class="field">
+                <label>*★┇ASKOT:*</label>
+                <input type="text" id="askot" placeholder="Masukkan asal kota Anda">
+            </div>
+            <div class="field">
+                <label>*★┇GENDER:*</label>
+                <input type="text" id="gender" placeholder="Masukkan gender Anda">
+            </div>
+            <div class="field">
+                <label>*★┇AGAMA:*</label>
+                <input type="text" id="agama" placeholder="Masukkan agama Anda">
+            </div>
+            <p>──── ୨୧ ────</p>
+        </div>
+        <button id="submitBtn" disabled>Kirim Intro</button>
+        <div class="footer">
+            <p>༻˚ׅ𝘀𝗲𝗺𝗼𝗴𝗮 𝗯𝗲𝘁𝗮𝗵𝗵 𝘆𝗮𝗮ᥫ᭡˚༺</p>
+        </div>
+    </div>
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function checkInputs() {
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    allFilled = false;
+                }
+            });
+            if (allFilled) {
+                submitBtn.classList.add('enabled');
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.classList.remove('enabled');
+                submitBtn.disabled = true;
+            }
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('input', checkInputs);
+        });
+
+        submitBtn.addEventListener('click', () => {
+            // Redirect langsung ke link grup WhatsApp
+            window.location.href = 'https://chat.whatsapp.com/CkEFtbR9Htu6k74b4XCnmb';
+        });
+    </script>
+</body>
+</html>
